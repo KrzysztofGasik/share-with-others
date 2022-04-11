@@ -1,0 +1,21 @@
+.Wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0.5em 1em;
+}
+
+.InputWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 0 1em;
+}
+
+.Label {
+  margin: 1em 0;
+}
+
+.Input {
+  padding: 1em;
+}

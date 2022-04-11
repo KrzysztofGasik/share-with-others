@@ -1,0 +1,47 @@
+.Wrapper {
+  height: 500px;
+  background-image: url("../../../assets/header_start_img.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.Grid {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.Paragraph {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.Link {
+  border: 1px solid black;
+  background: transparent;
+  margin: 1em;
+  font-size: 1em;
+  padding: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black-color);
+  transition: all 200ms ease-in;
+}
+
+.Link:hover {
+  cursor: pointer;
+  color: var(--white-color);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+}
+
+@media all and (max-width: 768px) {
+  .Wrapper {
+    background-position: center;
+    background-size: cover;
+  }
+}

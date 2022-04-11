@@ -1,0 +1,12 @@
+.Form {
+  margin: 0.5em 1em;
+}
+
+.ButtonWrapper {
+  margin: 0.5em 1em;
+}
+
+.ButtonDisabled {
+  cursor: not-allowed;
+}
+

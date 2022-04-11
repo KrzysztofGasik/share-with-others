@@ -1,0 +1,74 @@
+.Wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1em 0;
+}
+.Image {
+  margin: 1.5em 0;
+}
+.Info {
+  background-image: var(--background-image);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.35em;
+}
+.Steps {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+  padding: 2em 0;
+}
+.Steps > * {
+  margin: 0.35em 0;
+}
+.Step {
+  font-size: 3em;
+  margin: 0.25em 0;
+  color: var(--gold-dark-color);
+}
+.Title {
+  font-size: 1.5em;
+}
+.TextTitle,
+.TextInfo {
+  color: var(--gold-dark-color);
+}
+.TextTitle {
+  font-size: 1.25em;
+}
+.TextInfo {
+  font-size: 1em;
+}
+.HRLine {
+  border: 1px solid var(--gold-dark-color);
+  width: 150px;
+  margin: 0.25em 0;
+}
+
+.Link {
+  border: 1px solid var(--black-color);
+  background: transparent;
+  margin: 1em 0;
+  font-size: 1em;
+  padding: 2em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black-color);
+  transition: all 200ms ease-in;
+}
+
+.Link:hover {
+  cursor: pointer;
+  color: var(--white-color);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+}

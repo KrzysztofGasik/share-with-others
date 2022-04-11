@@ -1,0 +1,39 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-image: var(--background-image);
+  color: var(--white-color);
+}
+.Info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--gold-dark-color);
+}
+
+.Title,
+.Description {
+  padding: 1em;
+}
+.Title {
+  font-size: 2.25em;
+}
+.Description {
+  font-size: 1.35em;
+}
+.ImageDecoration {
+  filter: invert(29%) sepia(67%) saturate(391%) hue-rotate(12deg)
+    brightness(92%) contrast(93%);
+}
+.Description {
+  line-height: 1.5em;
+}
+
+.Image {
+  max-width: 100%;
+  display: block;
+  padding: 1em;
+  border-radius: 1.5em;
+}

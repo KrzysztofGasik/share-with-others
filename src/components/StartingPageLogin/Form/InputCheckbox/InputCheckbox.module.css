@@ -1,0 +1,77 @@
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5em 1em;
+}
+
+.InputWrapper {
+  margin: 1em;
+  position: relative;
+}
+
+.TextInputWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 40px;
+  height: 20px;
+  z-index: 1;
+  margin: 0;
+  cursor: pointer;
+  background-color: red;
+}
+
+.TextInput {
+  margin: 0 0 0 1em;
+  padding: 0.2em;
+}
+
+.TextInput:hover {
+  cursor: pointer;
+}
+
+.Label {
+  margin: 0;
+  position: relative;
+  padding: 0 0 0 3em;
+}
+
+.Label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: #ddd;
+  transition: background-color 300ms ease;
+}
+.Label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #bbb;
+  transition: background-color 300ms ease, left 300ms ease;
+}
+
+.Wrapper .Input:checked + .Label::after {
+  left: 1.3em;
+  background-color: #fbcc0f;
+}
+
+.Wrapper .Input:checked + .Label::before {
+  background-color: #be9800;
+}

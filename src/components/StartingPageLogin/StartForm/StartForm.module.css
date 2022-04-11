@@ -1,0 +1,16 @@
+.Link {
+  text-decoration: none;
+  color: var(--black-color);
+  text-align: center;
+  display: block;
+  border: 1px solid transparent;
+  transition: border 250ms ease-in;
+  width: 200px;
+  padding: 1em;
+  margin: 1em auto;
+  font-size: 2em;
+}
+
+.Link:hover {
+  border: 1px solid var(--black-color);
+}

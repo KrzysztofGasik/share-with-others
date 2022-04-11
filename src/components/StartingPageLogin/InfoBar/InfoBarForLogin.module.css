@@ -1,0 +1,23 @@
+.Wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1em;
+  background-image: url("../../../assets/bg_yellow.jpg");
+  background-size: 100% 100%;
+}
+.Element {
+  padding: 1em;
+}
+.Step {
+  text-transform: uppercase;
+  margin: 0.5em;
+  font-size: 1.75em;
+}
+
+.Heading {
+  padding: 0.5em 0;
+  margin: 0.5em 1em;
+}

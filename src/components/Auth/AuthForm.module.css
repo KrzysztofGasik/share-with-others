@@ -1,0 +1,26 @@
+.Header {
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.Error {
+  text-align: center;
+  margin: 0.5em auto;
+  padding: 1em;
+  background-color: var(--error-color);
+  color: var(--white-color);
+  width: 75%;
+  font-weight: bold;
+  border-radius: 0.625em;
+}
+
+.Loading {
+  text-align: center;
+  margin: 0.5em auto;
+  padding: 1em;
+  background-color: var(--gold-color);
+  color: var(--white-color);
+  width: 75%;
+  font-weight: bold;
+  border-radius: 0.625em;
+}

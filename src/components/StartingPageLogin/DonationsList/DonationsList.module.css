@@ -1,0 +1,27 @@
+.Wrapper {
+  padding: 1em;
+}
+
+.GridHeaders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  width: 100%;
+  justify-items: center;
+}
+
+.Link {
+  display: block;
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.Loading {
+  text-align: center;
+  margin: 0.5em auto;
+  padding: 1em;
+  background-color: var(--gold-color);
+  color: var(--white-color);
+  width: 75%;
+  font-weight: bold;
+  border-radius: 0.625em;
+}

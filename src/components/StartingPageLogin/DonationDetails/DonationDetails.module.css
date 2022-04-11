@@ -1,0 +1,49 @@
+.Wrapper {
+  width: 90vw;
+  padding: 1em;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 1);
+  border-radius: 0.25em;
+}
+
+.Wrapper > * {
+  margin: 1em 0;
+}
+
+.ID,
+.Date {
+  margin: 0.5em 2em;
+}
+
+.Actions {
+  margin: 0 0 0 2em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.DeleteButton {
+  margin: 0;
+}
+
+.Link {
+  text-decoration: none;
+  color: var(--black-color);
+  margin: 0 0 0 1em;
+  border-bottom: 1px solid transparent;
+  padding: 1em;
+}
+
+.Link:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+@media all and (min-width: 768px) {
+  .Wrapper {
+    width: 50vw;
+  }
+}

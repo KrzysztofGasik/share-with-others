@@ -1,0 +1,29 @@
+.Wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 5em;
+  background: url("../../../assets/bg_yellow.jpg");
+  background-size: cover;
+}
+.Element {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #5f5420;
+  padding: 1em;
+}
+.Info {
+  padding: 10px 0;
+}
+.Number {
+  font-size: 5em;
+  font-weight: 400;
+}
+.Title {
+  text-transform: uppercase;
+}

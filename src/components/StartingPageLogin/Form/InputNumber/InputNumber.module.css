@@ -1,0 +1,19 @@
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5em 1em;
+}
+
+.InputWrapper {
+  margin: 1em;
+  position: relative;
+}
+
+.Input {
+  margin: 0 0 0 1em;
+  padding: 0.2em;
+}
+
+.Input:hover {
+  cursor: pointer;
+}

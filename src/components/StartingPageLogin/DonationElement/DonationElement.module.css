@@ -1,0 +1,21 @@
+.Element {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  justify-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--black-color);
+}
+
+.Element:nth-child(odd):hover {
+  background-color: var(--gold-color);
+  cursor: grab;
+}
+
+.Element:nth-child(even):hover {
+  background-color: var(--gold-light-color);
+  cursor: grab;
+}
+
+.Data {
+  margin: 1em 0;
+}

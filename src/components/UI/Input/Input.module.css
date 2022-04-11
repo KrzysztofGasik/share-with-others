@@ -1,0 +1,18 @@
+.Wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0.5em 0;
+}
+
+.Label {
+  margin: 0.5em 0;
+}
+
+.Input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid var(--black-color);
+  padding: 1em 0.2em;
+  width: 100%;
+  min-width: 250px;
+}

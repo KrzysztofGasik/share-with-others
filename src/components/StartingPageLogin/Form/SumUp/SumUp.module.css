@@ -1,0 +1,20 @@
+.List {
+  list-style: none;
+  margin: 0.5em 1em;
+}
+
+.ListElement {
+  margin: 0.5em 1em;
+}
+
+.Title {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+  margin: 0.5em 0;
+}
+
+.HRLine {
+  width: calc(100vw / 5);
+  margin: 0 0 0 1em;
+}

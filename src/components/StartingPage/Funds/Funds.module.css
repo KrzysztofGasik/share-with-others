@@ -1,0 +1,120 @@
+.Wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+.Title {
+  font-size: 1.5em;
+}
+.Image {
+  margin: 1em 0;
+}
+.Buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.Button {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 15px;
+  margin-right: 5px;
+  font-size: 1.15em;
+  width: 200px;
+}
+.Button:hover {
+  border-color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.Overview {
+  padding: 0 1em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.ListWrapper {
+  width: calc(100vw - 10em);
+  padding: 0 2em;
+}
+
+.Transition {
+  animation: entry 750ms ease;
+}
+
+.List {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin: 0.5em 0 0 0;
+}
+
+.LeftColumn {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  width: 250px;
+}
+.LeftColumnTitle {
+  margin: 0.5em 0;
+  font-weight: 400;
+}
+.LeftColumnText {
+  text-align: left;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.RightColumn {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+}
+.RightColumnText {
+  text-align: right;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+@keyframes entry {
+  from {
+    opacity: 0;
+    /* transform: scale(.75); */
+  }
+
+  to {
+    opacity: 1;
+    /* transform: scale(1); */
+  }
+}
+
+@media all and (max-width: 460px) {
+  .ListWrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .List {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .LeftColumn {
+    align-items: center;
+  }
+
+  .LeftColumnTitle,
+  .LeftColumnText,
+  .RightColumnText {
+    text-align: center;
+  }
+}
