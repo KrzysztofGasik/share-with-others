@@ -35,6 +35,14 @@
   margin: 1em 0;
 }
 
+.SelectedOrganization {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 1em;
+  border: 1px solid var(--black-color);
+  min-width: 8em;
+}
+
 .ListWrapper {
   width: calc(100vw - 10em);
   padding: 0 2em;

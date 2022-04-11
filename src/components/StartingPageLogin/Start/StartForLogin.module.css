@@ -1,9 +1,9 @@
 .Wrapper {
-  height: 500px;
+  height: auto;
   background-image: url("../../../assets/header_logged_img.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
 }
 
 .Grid {
@@ -11,7 +11,7 @@
   display: grid;
   place-content: center;
   justify-items: center;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .Paragraph {
@@ -22,6 +22,7 @@
 
 .StepWrapper {
   display: flex;
+  flex-direction: column;
 }
 
 .Step {
@@ -35,6 +36,7 @@
   height: 100px;
   margin: 1.5em .5em;
   padding: 1em;
+  /* background-color: var(--white-color); */
 }
 .StepNumberText {
   transform: rotate(45deg);
@@ -45,9 +47,15 @@
   font-size: .85em;
 }
 
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) {
   .Wrapper {
+    height: 500px;
     background-position: center;
     background-size: cover;
+  }
+
+  .StepWrapper {
+    display: flex;
+    flex-direction: row;
   }
 }

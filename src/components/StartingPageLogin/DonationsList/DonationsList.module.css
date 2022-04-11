@@ -25,3 +25,10 @@
   font-weight: bold;
   border-radius: 0.625em;
 }
+
+.NoDonations {
+  text-align: center;
+  margin: 1em auto;
+  padding: 1em;
+  font-size: 2em;
+}

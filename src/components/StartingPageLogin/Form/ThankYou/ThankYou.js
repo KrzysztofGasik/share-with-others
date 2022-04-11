@@ -27,7 +27,7 @@ const ThankYou = () => {
     <Fragment>
       <InfoBarLogin step={6} />
       <h3 className={classes.Heading}>
-        You will be redirected to your donations in {counter} seconds
+        You will be redirected to home page in {counter} seconds
       </h3>
     </Fragment>
   );

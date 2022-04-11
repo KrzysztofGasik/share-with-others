@@ -8,17 +8,18 @@ import decoration from "../../../assets/decoration.png";
 
 import classes from "./Funds.module.css";
 
-const initialState = false;
-
 const Funds = () => {
   const [selectedOrganization, setSelectedOrganization] = useState(Fundations);
+  const [selectedOrganizationName, setSelectedOrganizationName] =
+    useState("Fundation's");
   const [toggleClass, setToggleClass] = useState(false);
 
-  const selectedHandler = org => {
+  const selectedHandler = (org, name) => {
     setToggleClass(true);
     setSelectedOrganization(org);
+    setSelectedOrganizationName(name);
     setTimeout(() => {
-      setToggleClass(initialState);
+      setToggleClass(false);
     }, 200);
   };
   return (
@@ -28,12 +29,15 @@ const Funds = () => {
       <div className={classes.Buttons}>
         <Button
           text="Foundations"
-          onClick={() => selectedHandler(Fundations)}
+          onClick={() => selectedHandler(Fundations, "Fundation's")}
         />
-        <Button text="NGO's" onClick={() => selectedHandler(Organizations)} />
+        <Button
+          text="NGO's"
+          onClick={() => selectedHandler(Organizations, "NGO's")}
+        />
         <Button
           text="Local fundraisers"
-          onClick={() => selectedHandler(LocalFunds)}
+          onClick={() => selectedHandler(LocalFunds, "Local funds")}
         />
       </div>
       <p className={classes.Overview}>
@@ -41,6 +45,7 @@ const Funds = () => {
         we cooperate. You can check what they do, who they help and what they
         need.
       </p>
+      <p className={classes.SelectedOrganization}>{selectedOrganizationName}</p>
       <div
         className={
           toggleClass
@@ -48,7 +53,7 @@ const Funds = () => {
             : classes.ListWrapper
         }
       >
-        {selectedOrganization.map(val => {
+        {selectedOrganization.map((val) => {
           return (
             <div className={classes.List} key={val.name}>
               <div className={classes.LeftColumn}>

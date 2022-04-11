@@ -15,6 +15,7 @@ import helperFunctions from "../FormHelperFunctions/FormHelperFunctions";
 
 import classes from "../Form.module.css";
 import sumupClasses from "./SumUp.module.css";
+import { FIREBASE_DB_URL } from "../../../../firebase.config";
 
 const SumUp = () => {
   const history = useHistory();
@@ -58,7 +59,7 @@ const SumUp = () => {
     };
 
     const response = await fetch(
-      `https://share-with-other-users-db-default-rtdb.firebaseio.com/${userId}/donations.json`,
+      `${FIREBASE_DB_URL}/${userId}/donations.json`,
       {
         method: "POST",
         body: JSON.stringify(donation),

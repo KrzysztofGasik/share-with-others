@@ -4,9 +4,11 @@ import { useContext, Fragment } from "react";
 import AuthContext from "../../../store/auth-context";
 import Button from "../../UI/Button/Button";
 import helperFunctions from "../Form/FormHelperFunctions/FormHelperFunctions";
+import { FIREBASE_DB_URL } from "../../../firebase.config";
 
 import classes from "./DonationDetails.module.css";
 import sumupClasses from "../Form/SumUp/SumUp.module.css";
+
 
 const DonationDetails = props => {
   const history = useHistory();
@@ -27,7 +29,7 @@ const DonationDetails = props => {
   ];
   const deleteHandler = async () => {
     const response = await fetch(
-      `https://share-with-other-users-db-default-rtdb.firebaseio.com/${userId}/donations/${idFromDB}.json`,
+      `${FIREBASE_DB_URL}/${userId}/donations/${idFromDB}.json`,
       {
         method: "DELETE"
       }

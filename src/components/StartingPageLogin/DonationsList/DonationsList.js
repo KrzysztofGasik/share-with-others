@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import AuthContext from "../../../store/auth-context";
 import DonationElement from "../DonationElement/DonationElement";
+import { FIREBASE_DB_URL } from "../../../firebase.config";
 
 import classes from "./DonationsList.module.css";
 
@@ -18,7 +19,7 @@ const DonationsList = () => {
 
     try {
       const response = await fetch(
-        `https://share-with-other-users-db-default-rtdb.firebaseio.com/${userId}/donations.json`
+        `${FIREBASE_DB_URL}/${userId}/donations.json`
       );
       if (!response.ok) throw new Error("Something went wrong");
       const data = await response.json();
@@ -60,6 +61,7 @@ const DonationsList = () => {
           <h3>Donation submited (date)</h3>
           <h3>Donation submited (time)</h3>
         </div>
+        {donations.length === 0 && <p className={classes.NoDonations}>No submitted donations...</p>}
         {donations.length > 0 &&
           donations.map((donation) => (
             <Link
