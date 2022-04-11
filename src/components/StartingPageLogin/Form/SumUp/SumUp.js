@@ -48,7 +48,6 @@ const SumUp = () => {
   const nextBtnHandler = async () => {
     const createdDate = new Date().toISOString().split("T")[0];
     const createdHour = new Date().toISOString().split("T")[1].slice(0, 8);
-    // console.log(createdDate, createdHour);
     const donation = {
       id: Date.now(),
       created: `${createdDate} / ${createdHour}`,
