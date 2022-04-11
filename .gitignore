@@ -1,5 +1,9 @@
 # firebase api key
 /src/firebase.config.js
+.firebase/
+.firebaserc
+.github/
+firebase.json
 
 # dependencies
 /node_modules
