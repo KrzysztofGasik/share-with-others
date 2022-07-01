@@ -36,7 +36,7 @@ const Page4 = () => {
     }
   };
 
-  const onSubmit = data => {
+  const onSubmit = () => {
     setIsFormValid(true);
   };
 

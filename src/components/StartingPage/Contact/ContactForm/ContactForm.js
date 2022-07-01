@@ -1,31 +1,37 @@
+import { useForm } from "react-hook-form";
+
 import ContactInput from "../ContactInput/ContactInput";
 import Form from "../../../UI/Form/Form";
 import classes from "./ContactForm.module.css";
 
+const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+
 const ContactForm = () => {
-  const submitHandler = e => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("Contact form data", data);
   };
   return (
-    <Form onSubmit={submitHandler}>
-      <span className={classes.Title}>Contact form</span>
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <ContactInput label="name" register={register} required errors={errors} />
+      {errors.name && <p className={classes.Error}>This field is required</p>}
       <ContactInput
-        id="name"
-        type="text"
-        label="Name"
-        placeholder="Type your name"
+        label="email"
+        register={register}
+        required
+        errors={errors}
+        pattern={emailRegex}
       />
+      {errors.email && <p className={classes.Error}>This field is required</p>}
       <ContactInput
-        id="email"
-        type="email"
-        label="Email"
-        placeholder="Type your email"
-      />
-      <ContactInput
-        id="message"
-        type="text"
-        label="Message"
-        placeholder="Type your message"
+        label="message"
+        register={register}
+        errors={errors}
       />
       <input type="submit" value="Send" className={classes.InputSubmit} />
     </Form>

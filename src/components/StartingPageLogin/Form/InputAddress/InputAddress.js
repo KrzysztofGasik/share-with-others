@@ -15,8 +15,6 @@ const InputAddress = ({ label, register, required, defaultValue, pattern }) => {
     dispatch(step4Actions.add(change));
   };
 
-  // const now = new Date().toISOString().split("T")[0];
-
   let tomorrow = new Date();
   tomorrow.setTime(tomorrow.getTime() + 24 * 60 * 60 * 1000);
 

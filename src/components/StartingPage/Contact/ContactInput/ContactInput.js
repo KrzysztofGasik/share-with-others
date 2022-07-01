@@ -1,14 +1,16 @@
-import classes from"./ContactInput.module.css";
+import classes from "./ContactInput.module.css";
 
-const ContactInput = ({id,type,label,placeholder}) => {
+const ContactInput = ({ label, register, required, defaultValue ,pattern}) => {
   return (
     <div className={classes.Wrapper}>
-      <label htmlFor={id} className={classes.Label}>{label}</label>
+      <label className={classes.Label} htmlFor={label}>
+        {label.charAt(0).toUpperCase() + label.slice(1)}
+      </label>
       <input
         className={classes.Input}
-        type={type}
-        id={id}
-        placeholder={placeholder}
+        defaultValue={defaultValue}
+        type={label === "email" ? "email" : "text"}
+        {...register(label, { required, pattern })}
       />
     </div>
   );

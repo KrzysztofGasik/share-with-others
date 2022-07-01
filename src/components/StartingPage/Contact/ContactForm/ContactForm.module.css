@@ -16,6 +16,11 @@
   background-color: var(--white-color)
 }
 
+.Error {
+  font-weight: bold;
+  color: red;
+}
+
 @media all and (max-width: 768px) {
   .InputWrapper {
     display: grid;
